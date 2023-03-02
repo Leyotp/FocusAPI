@@ -9,11 +9,11 @@ params = {
     "refresh_token": "1000.365884a88476be0720d11c4931a3c026.ea403257d059d1f6727a715d72da4b9d"
 }
 
-# Make the request to obtain an access token
+# Resp contiene la url y los parametros como lo que se enviara al CRM 
 resp = requests.post(url, params=params)
 
-# Extract the access token from the response
+# Se extrae el token, pasandolo como JSON 
 access_token = resp.json()["access_token"]
 
-# Print the access token value
+# Se imprime el token
 print("Access Token:", access_token)
